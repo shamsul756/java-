@@ -41,18 +41,65 @@
 // console.log(specificDate.toLocaleDateString('en-GB'));
 
 
-let a = 5;
-let b = 7;
-console.log(a, b);
-const temp = a;
-a = b;
-b = temp;
+// let a = 5;
+// let b = 7;
+// console.log(a, b);
+// const temp = a;
+// a = b;
+// b = temp;
 
 
-console.log(a, b);
-// temp means a function when we are trying to change one value to another then we use temp.
-let a = 4;
-let b = 5;
-console.log(a, b);
-[a, b] = [b, a];
-console.log(a, b);
+// console.log(a, b);
+// // temp means a function when we are trying to change one value to another then we use temp.
+// let a = 4;
+// let b = 5;
+// console.log(a, b);
+// [a, b] = [b, a];
+// console.log(a, b);
+
+// const afroja = 23;
+// const sadiya = 25;
+// if (afroja > sadiya){
+//     console.log('sadiya will be a get a apple');
+// }
+// else {
+//     console.log('afroja will be eat an apple');
+// }
+
+// function getMax (num1, num2){
+//     if (num1 > num2){
+//         return num1;
+//     }
+//     else {
+//         return num2;
+//     }
+// }
+// const max = getMax(42, 10);
+// console.log('max of two is:', max);
+
+const rahim = 24;
+const banki = 34;
+const bulki = 54;
+if (rahim > bulki && rahim > banki ){
+    console.log('rahim is the ultimately boss');
+}
+else if (banki > rahim && banki > bulki){
+    console.log('banki is the superboss');
+}
+else {
+    console.log('bulki is the most powerful boss');
+}
+function maxOfThree (num1, num2, num3){
+    if(num1 >num2 && num1 >num3){
+        return num1;
+    }
+    else if(num2 >num1 && num2 >num3){
+        return num2;
+    }
+    else {
+        return num3;
+    }
+}
+const max = maxOfThree(354, 443, 333);
+const result = max;
+console.log(result);
