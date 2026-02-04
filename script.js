@@ -104,24 +104,24 @@
 // const result = max;
 // console.log(result);
 
-const heights = [ 23, 42, 41, 40, 56, 57];
+// const heights = [ 23, 42, 41, 40, 56, 57];
 
-function getMax(number)
+// function getMax(number)
 
-{
-     let maximum = number[0];
-   for (const num of number){
+// {
+//      let maximum = number[0];
+//    for (const num of number){
    
-    if(num > maximum){
-        maximum = num;
-    }
-   }
-   return maximum;
-}
+//     if(num > maximum){
+//         maximum = num;
+//     }
+//    }
+//    return maximum;
+// }
 
-const output = getMax(heights);
-// 
-console.log('max value is ', output);
+// const output = getMax(heights);
+// // // 
+// // console.log('max value is ', output);
 // const prices = [998, 55, 3333, 55555, 3354532, 4444654 ];
 // function getMin(numbers){
 //   let min = numbers[0]
@@ -135,3 +135,50 @@ console.log('max value is ', output);
 // }
 // const cheap = getMin(prices);
 // console.log('cheapest one is :', cheap);
+
+// const prices = [33, 44, 55, 22, 55, 33];
+// function gitMin(numbers){
+//   let min = numbers [0];
+//   for(const number of numbers){
+//     if(number < min){
+//       min = number;
+//     }
+//   }
+//   return min;
+// }
+// const chep = gitMin(prices);
+// console.log('cheapest one is:', chep);
+
+// const prices = [332, 44, 5533, 5533, 55];
+// function any(results){
+//   let min = results [0];
+//   for(const result of results){
+//     if(result < min){
+//       min = result;
+//     }
+//   }
+//   return min;
+// }
+// const cheapest = any (prices);
+// console.log('most cheapest number ever:', cheapest);
+
+const mobiles = [
+
+  {name: 'realme', color: 'off-white', prize: 1241, camera : '10mp'},
+  {name: 'redme', color: 'off-white', prize: 254456, camera : '12mp'},
+  {name: 'apple', color: 'off-white', prize: 23222 , camera : '12mp'},
+  {name: 'oppo', color: 'off-white', prize:12574, camera : '14mp'}
+
+]
+function getCheapestMobiles(mobiles){
+  let min = mobiles[0]
+ for(const mobile of mobiles){
+ if(mobiles < min){
+  min = mobiles;
+ }
+ }
+ return min;
+}
+
+const cheap =  getCheapestMobiles(mobiles);
+console.log('most chepest mobiles', cheap);
