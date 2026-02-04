@@ -77,29 +77,61 @@
 // const max = getMax(42, 10);
 // console.log('max of two is:', max);
 
-const rahim = 24;
-const banki = 34;
-const bulki = 54;
-if (rahim > bulki && rahim > banki ){
-    console.log('rahim is the ultimately boss');
-}
-else if (banki > rahim && banki > bulki){
-    console.log('banki is the superboss');
-}
-else {
-    console.log('bulki is the most powerful boss');
-}
-function maxOfThree (num1, num2, num3){
-    if(num1 >num2 && num1 >num3){
-        return num1;
+// const rahim = 24;
+// const banki = 34;
+// const bulki = 54;
+// if (rahim > bulki && rahim > banki ){
+//     console.log('rahim is the ultimately boss');
+// }
+// else if (banki > rahim && banki > bulki){
+//     console.log('banki is the superboss');
+// }
+// else {
+//     console.log('bulki is the most powerful boss');
+// }
+// function maxOfThree (num1, num2, num3){
+//     if(num1 >num2 && num1 >num3){
+//         return num1;
+//     }
+//     else if(num2 >num1 && num2 >num3){
+//         return num2;
+//     }
+//     else {
+//         return num3;
+//     }
+// }
+// const max = maxOfThree(354, 443, 333);
+// const result = max;
+// console.log(result);
+
+const heights = [ 23, 42, 41, 40, 56, 57];
+
+function getMax(number)
+
+{
+     let maximum = number[0];
+   for (const num of number){
+   
+    if(num > maximum){
+        maximum = num;
     }
-    else if(num2 >num1 && num2 >num3){
-        return num2;
-    }
-    else {
-        return num3;
-    }
+   }
+   return maximum;
 }
-const max = maxOfThree(354, 443, 333);
-const result = max;
-console.log(result);
+
+const output = getMax(heights);
+// 
+console.log('max value is ', output);
+// const prices = [998, 55, 3333, 55555, 3354532, 4444654 ];
+// function getMin(numbers){
+//   let min = numbers[0]
+// for (const number of numbers ){
+//   if(number < min){
+//     min = number;
+//   }
+// }
+// return min;
+
+// }
+// const cheap = getMin(prices);
+// console.log('cheapest one is :', cheap);
