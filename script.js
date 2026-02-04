@@ -162,23 +162,60 @@
 // const cheapest = any (prices);
 // console.log('most cheapest number ever:', cheapest);
 
-const mobiles = [
+// const mobiles = [
 
-  {name: 'realme', color: 'off-white', prize: 1241, camera : '10mp'},
-  {name: 'redme', color: 'off-white', prize: 254456, camera : '12mp'},
-  {name: 'apple', color: 'off-white', prize: 23222 , camera : '12mp'},
-  {name: 'oppo', color: 'off-white', prize:12574, camera : '14mp'}
+//   {name: 'realme', color: 'off-white', prize: 1241, camera : '10mp'},
+//   {name: 'redme', color: 'off-white', prize: 254456, camera : '12mp'},
+//   {name: 'apple', color: 'off-white', prize: 23222 , camera : '12mp'},
+//   {name: 'oppo', color: 'off-white', prize:12574, camera : '14mp'}
+
+// ]
+// function getCheapestMobiles(mobiles){
+//   let max = mobiles[0]
+//  for(const mobile of mobiles){
+//  if(mobile.prize > max.prize){
+//   max = mobile ;
+//  }
+//  }
+//  return max;
+// }
+
+// const result =  getCheapestMobiles(mobiles);
+// console.log('most chepest mobiles', result);
+
+// const products = [
+// {name: 'shamspu', price : 300, quantity :5 },
+// {name: 'watch', price : 1500, quantity :4 },
+// {name: 'pant', price : 1300, quantity :3 },
+// {name: 'tea-shirt', price : 800, quantity :2 }
+
+// ]
+// function carTotal (products){
+//   let total = 0;
+//   for (const product of products){
+//     let thisProductCost = product.price * product.quantity;
+//     total = total + thisProductCost;
+//   }
+//   return total;
+// }
+// const totalShopping = carTotal(products);
+// console.log(totalShopping);
+
+const products =[
+{name :'t-shirt',  price : 340, quantity: 2},
+{name : 'pant', price : 540, quantity :3},
+{name : 'under-pant', price : 300, quantity: 2},
+{name : 'shampu', price : 400, quantity: 3}
 
 ]
-function getCheapestMobiles(mobiles){
-  let min = mobiles[0]
- for(const mobile of mobiles){
- if(mobiles < min){
-  min = mobiles;
- }
- }
- return min;
+function shoppingCart (products){
+  let total = 0;
+  for(const product of products){
+    let totalAllCost = product.price * product.quantity;
+    total = total + totalAllCost;
+  }
+  return total;
 }
+const totalCost = shoppingCart(products);
 
-const cheap =  getCheapestMobiles(mobiles);
-console.log('most chepest mobiles', cheap);
+console.log(totalCost);
