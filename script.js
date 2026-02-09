@@ -1,199 +1,117 @@
-// function add (num1, num2){
-//   return num1 + num2;
-// }
-// function subtract (num1, num2){
+/*function signature/sample */
+function newPrice(currentPrice , discount ) {
+    //    first i check input zemon eita number kina and eita discount kina .zodi kunota na hoy taile invalid hobe
 
-//   return num1 - num2;
-// }
-// function multiple (num1, num2){
-//   return num1 * num2;
-// }
-// function divide (num1, num2){
-//   return num1 / num2;
-// }
-// function calculator(a, b, opearation){
-//   if(opearation === 'add'){
-//     const result = add (a, b);
-//     return result;
-//   }
-//   else if(opearation === 'subtract'){
-//     const result = subtract (a, b);
-//   }
-//   else if (opearation === 'multiply'){
-//    return multiply(a, b);
-//   }
-//   else if(opearation === 'divide'){
-//     return divide (a, b)
-//   }
-//   else {
-//     return "only  'add', 'subtract', 'multiple', 'divide' opearation is allowed."
-//   }
-//   }
-//   const result = calculator(5, 7, 'add');
-//   console.log(result);
+if(typeof currentPrice!=="number" || typeof discount !== "number" ){
+    return "Invalid";
+}
+//  ekhon dekhbo ze discount ta 0 er theke suto kina or discount ta 100 er ceye beshi ki na . holei mama tumi cot , invalid hoye zao 
+
+if(discount < 0 || discount >100){
+    return "Invalid";
+}
+//  ekhon amaferke discount amout ber korte hobe and final price ta ber korte hobe 
+const discountAmount = (currentPrice * discount / 100);
+const finalPrice = currentPrice - discountAmount;
+// 3 ta digit dekhate hobe point er por taile to.fixed use hobe 
+return finalPrice.toFixed(3);
+}
 
 
-// function blender(fruit){
-//   console.log('i making a fruit juice', fruit);
-// }
-// blender('apple')
-// let num1 = 24;
-// let num2 = 20;
-
-// let sum = num1 + 2;
-// if (sum % 2 === 0){
-//   console.log('this is a even number')}
-//   else {
-//     console.log('it is not a even numbers , so we can say it is odd number')
-//   }
-
-// function checkEvenOrOdd(num1, num2){
+/*function signature/sample */
+function validOtp(otp) {
+    // input zodi sotik format e na thake taile invlid return korbe tiale kaj holo type of check kora 
+    if(typeof otp !== "string"){
+        return "Invalid";
+    }
+//   otp 8 character hoite hobe string na hoile invalid return korbe emonki ph- diye shuru korte hobe easy way hocce startWith method use kora
  
-//   let sum = num1 + num2;
-//    console.log(sum);
-//   if(sum % 2 === 0){
-//     console.log('it is an even number');
-//   }
-//   else{
-//     console.log('it is an odd number');
-//   }
-// }
-//  checkEvenOrOdd (33, 44);
-//  checkEvenOrOdd (30, 102)
-
-// function sumTwoNumberAndMultipleByFive(num1, num2){
-//   sum = num1 + num2;
-//   result = sum * 5;
-//   if (result % 2 === 0){
-//     return result;
-//   }
-//   else{
-//     return "it is not a even"
-//   }
-
-// }
-//  let outcome = sumTwoNumberAndMultipleByFive(3, 4);
-//  console.log(outcome);
-
-// function countObjectNumber(obj){
-//  let count = Object.keys(obj).length;
-//  console.log(count);
-// }
-// let person = ({name: 'shamsul islam', age: 23, id: 'ash2422049m'})
-// countObjectNumber(person)
-
-// function countObjectNumber(objected){
-//   let count = Object.keys(objected).length;
-//   console.log(count);
-// }
-// let person = ({name : 'shamul', age : 32});
-// countObjectNumber(person)
-// function wordFrequency(sentence) {
-//     let words = sentence.split(" ");
-//     let wordCount = {};
-
-//     for (let word of words) {
-//         if (wordCount.hasOwnProperty(word)) {
-//             wordCount[word]++;
-//         } else {
-//             wordCount[word] = 1;
-//         }
-//     }
-
-//     return wordCount;
-// }
-
-// let output = wordFrequency('i love js and i love coading');
-// console.log(output);
-
-//  function wordFrequency(senteces){
-//    let words = senteces.split(" ");
-//    let wordCount = {};
-//    for (let word of words){
-//       if(wordCount.hasOwnProperty (word)){
-//          wordCount[word]++;
-
-//       }
-//       else {
-//          wordCount [word] = 1;
-//       }
-//    }
-//    return wordCount;
-//  }
-// *************************
-
-// function analyzeMarks(marksObj){
-//    // console.log(marksObj);
-//    let total = 0 ;
-//    let highestMark = -Infinity;
-//    let lowestMark = Infinity;
-
-//    let highestSubject = null;
-//    let lowestSubject = null;
-
-//    for (let subject in marksObj){
-//       let mark = marksObj[subject];
-//       total += mark;
-//       if(mark > highestMark ){
-//          highestMark = mark;
-//          highestSubject = subject;
-//       }
-//       if(mark < lowestMark){
-//          lowestMark = mark;
-//          lowestSubject = subject;
-//       }
-//       // console.log(key, "--> ", value);
-//    }
-//    console.log('heighstMark is :', highestMark);
-//    console.log('lowestMark is :', lowestMark);
-//    console.log('heigstSubject is :', highestSubject);
-//    console.log('lowestSubject is:', lowestSubject);
-//    let average = total / Object.keys(marksObj).length;
-//    // console.log("total value are:", total);
-//    // console.log('average number are :', average);
-
-//    return {
-//    total,
-//    average,
-//    }
-// }
-// let output = analyzeMarks({math: 344, english: 332, physics : 433, bangla : 33});
-// console.log(output);
+if(otp.length !==8 || !otp.startsWith("ph-") ){
+    return false;
+}
+return true;
+}
 
 
-function analyzeMark(markObject){
 
-   let total = 0;
-   let heighestMark = -Infinity;
-   let lowestMark = Infinity;
-   let heighestSubject = null;
-   let lowestSubject = null;
-   for(let markSub in markObject){
-     let sub = markObject[markSub];
-     total += sub;
-     if(sub > heighestMark){
-           heighestMark = sub;
-           heighestSubject = sub;
-     }
-     if(sub < lowestMark){
-      lowestMark = sub;
-      lowestSubject = sub;
-     }
-      
+function finalScore(obj) {
+//    amora dekhbo object ki string ki na and dekhbo array ki na 
+
+if (typeof obj !== "object" || obj === null  || Array.isArray(obj)){
+    return "Invalid";
+
+}
+// er porer kaj holo right wrong skip  ta ki string ki na dekhbo and condition holo right wrong skip 100 hoite hobe na hole invalid dibe 
+const {right, wrong , skip} = obj;
+if (typeof right !== "number" || typeof wrong !== "number"|| typeof skip !== "number") {
+    return "Invalid"
+}
+
+if (right + wrong + skip !== 100) {
+    return "Invalid"; }
+
+// score ber korte hobe 
+
+const score = right - (0.5 * wrong) ;
+
+//  point er kasakasi man anar jono ekhon use korte hobe Math.round 
+
+return Math.round (score);
+
+}
+
+
+function gonoVote(votes){
+    // fist kaj holo aray kina dekhte hobe 
+    if(!Array.isArray(votes)){
+      return "Invalid";
+    }
+    let haCount = 0;
+    let naCount = 0;
+
+    // ekhon condition dite hobe 
+    for(const vote of votes){
+      if (vote === "ha"){
+        haCount++;
+      }
+      else if(vote === "na"){
+        naCount++;
+      }
+    }
+    if(haCount === naCount){
+      return "equal"
+    }
+    else if(haCount > naCount){
+      return true;
+    }
+   else {
+    return false;
    }
-   // console.log(total);
-   console.log('heighst mark is :', heighestMark);
-   console.log('lowest mark is:', lowestMark);
-   console.log('the heighest subject is:', heighestSubject);
-   console.log('the lowest subject is:', lowestSubject);
-   let average = total / Object.keys (markObject).length;
-   console.log('total number are:', total);
-   console.log('total average are:', average);
-   return {
-   total,
-   average,
-}
 }
 
-let showResult = analyzeMark({'math': 32, 'banla' : 43, 'sociology': 38, 'biology': 83, 'chemistry': 43,});
-console.log(showResult);
+
+
+function analyzeText(str){
+    // kaj holo string kina check korte hobe 
+ if(typeof str !== "string"){
+    return "Invalid";
+ }
+// kisu likha ase kina check korte hobe
+if(str.trim().length === 0){
+    return "Invalid";
+} 
+const words = str.split ("");
+let longestword = " ";
+// ekhon world lenght check korte hobe 
+
+for(const word of words){
+    if(word.length > longestword.length){
+        longestword = word ;
+    }
+}
+const token = str.split ("").join("").length;
+return {
+    longwords: longestword ,
+    token :token
+};
+}
