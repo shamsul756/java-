@@ -1,0 +1,27 @@
+.article{
+    border: 5px solid black;
+    box-shadow: 10px 10px 14px 5px greenyellow;
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+}
+#{
+    position: relative;
+    height: 500px;
+    background-color: blueviolet;
+    border-radius: 30px;
+    box-shadow: 10px 15px 4px 3px green;
+    
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left center;
+
+}
+.hello{
+    width: 20px;
+    height: 20px;
+    border-radius:50%;
+    border: 2px solid red;
+    background: red;
+    position:absolute top right;
+}

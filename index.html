@@ -1,11 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    h1{
+      color: gold;
+    }
+    #food-title{
+      color: green;
+    }
+  </style>
+
 </head>
 <body>
-    
+
+    <h2>my first blog</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, reprehenderit voluptatibus unde modi aliquid incidunt quaerat corporis ipsa iusto nesciunt nam accusantium ab velit ratione quis suscipit asperiores perspiciatis facere, neque excepturi fugiat veniam consequuntur magnam et? Eligendi, corrupti tenetur?</p>
+ <header>
+  <h1>this is my header file</h1>
+ </header>
+ <main>
+  <h1 class="welcome">welcome my dom </h1>
+  <h1  class="welcome">hello</h1>
+  <h1  class="welcome">hwllo</h1>
+  <ul>
+    <li class="decoration">home</li>
+    <li class="decoration">blog</li>
+    <li>success</li>
+  </ul>
+ </main>
+ <section id="old-sylhet" class="redimat">
+  <h1 id="food-title">foods i love</h1>
+  <p>Lorem ipsum dolor sit, amet consectetur <span>adipisicing</span> elit. Quisquam, sunt perferendis perspiciatis doloremque cum expedita pariatur ab eos esse minus.</p>
+  <h1>hwllo <span>oligoli</span> hello</h1>
+   <ul>
+    <li class="decoration">rice</li>
+    <li class="decoration">rice</li>
+    <li class="decoration">rice</li>
+    <li class="decoration">rice</li>
+    <li id="item">fish</li>
+    <li>meat</li>
+    <li>lentils</li>
+    <li>burger</li>
+    <li>pasta</li>
+   </ul>
+ </section>
+ <section class="unradimat">
+  <ul>
+    <li class="decoration">home</li>
+  </ul>
+ </section>
+ <script>
+    const foodTitleH1 = document.getElementById('food-title')
+    console.log(foodTitleH1.innerText);
+  
+    const itemElement = document.getElementById('item')
+    itemElement.innerText = 'fish-item'
+
+    const welcomeElement = document.getElementsByClassName('welcome')
+    console.log(welcomeElement);
+    for (const element of welcomeElement){
+      console.log(element);
+    }
+  
+   
+ </script>
+ <script src="script.js"></script>
 </body>
 </html>
